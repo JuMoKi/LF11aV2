@@ -21,21 +21,24 @@ public class PizzaOrder {
             switch (pizza.getSize()) {
                 case "Large":
                     // TODO: füge der 'totalOrderCost' den Preis für eine große Pizza hinzu
+                    totalOrderCost += LARGE_COST;
                     break;
                     case "Medium":
                     // TODO: füge der 'totalOrderCost' den Preis für eine mittlere Pizza hinzu
+                    totalOrderCost += MEDIUM_COST;
                     break;
                     case "Small":
                     // TODO: füge der 'totalOrderCost' den Preis für eine kleine Pizza hinzu
+                    totalOrderCost += SMALL_COST;
                     break;
                 default:
                     totalOrderCost += 0.0;
             }
             // TODO: berechne die Gesamtzahl der Toppings
-            int totalToppings = 0;
-            // TODO berechne die 'totalOrderCost'. 
+            int totalToppings = pizza.getToppings().size();
+            // TODO berechne die 'totalOrderCost'
             // Formel: Gesamtzahl der Toppings * Kosten pro Topping
-            totalOrderCost += 0;
+            totalOrderCost += totalToppings * COST_PER_TOPPING;
         }
     }
 

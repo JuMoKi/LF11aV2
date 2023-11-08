@@ -28,6 +28,7 @@ public class OrderSystem {
             System.out.println("Enter the size of the pizza Large, Medium, Small: ");
             pizzaSize = scanner.next();
             // TODO: setze die Pizza-Größe
+            pizza.setSize(pizzaSize);
 
             int totalToppings;
             System.out.println("Enter the total amount of toppings on the pizza: ");
@@ -37,18 +38,22 @@ public class OrderSystem {
                 System.out.println("Enter the topping: ");
                 String topping = scanner.next();
                 // TODO füge das 'topping' zu den 'toppings' hinzu
+                toppings.add(topping);
             }
             // TODO: setze die Pizza-Toppings
+                pizza.setToppings(toppings);
 
             // TODO füge die Pizza zu den 'pizzas' hinzu
+                pizzas.add(pizza);
             
         }
         // Creating PizzaOrder object and relevant information with regards to order
         PizzaOrder order = new PizzaOrder(pizzas);
         // TODO: berechne die 'TotalOrderCost'
+        order.calculateTotalOrderCost();
 
         // TODO: gib die 'OrderSummary' aus
-
+         order.printOrderSummary();
         // Cleanup
         scanner.close();
     }
