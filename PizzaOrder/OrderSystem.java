@@ -47,7 +47,7 @@ public class OrderSystem {
                 pizzas.add(pizza);
             
         }
-        // Creating PizzaOrder object and relevant information with regards to order
+        // Creating PizzaOrder object and relevant information with regards to (da highest of da) order
         PizzaOrder order = new PizzaOrder(pizzas);
         // TODO: berechne die 'TotalOrderCost'
         order.calculateTotalOrderCost();
